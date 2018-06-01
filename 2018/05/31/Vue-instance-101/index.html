@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="en">
+<html class="theme-next pisces use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -87,7 +87,7 @@
 <meta property="og:description" content="So, you are using Vue. It’s an elegant and concise JavaScript Framework, right? After building many projects with Vue, I realized it’s time to dig into the Vue. Digging into the source code lets you u">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://user-images.githubusercontent.com/7347183/40701008-c6538b80-640e-11e8-828c-7463b355e49b.png">
-<meta property="og:updated_time" content="2018-05-31T14:53:09.323Z">
+<meta property="og:updated_time" content="2018-06-01T03:07:16.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue instance 101">
 <meta name="twitter:description" content="So, you are using Vue. It’s an elegant and concise JavaScript Framework, right? After building many projects with Vue, I realized it’s time to dig into the Vue. Digging into the source code lets you u">
@@ -99,7 +99,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -311,7 +311,7 @@
 <li><code>Notes and Drawing Tool</code> Vue has 191 files(about 13430 lines) in <code>src</code> folder at lastest dev branch. Taking notes and drawing diagrams can help you keep context when switching in many files and clarify your mind.</li>
 </ul>
 <p>Are you ready? Let’s go.</p>
-<p>Blow is the overview about src folder.</p>
+<h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><p>Blow is the overview about src folder.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">-src</div><div class="line">|</div><div class="line">|-- compiler</div><div class="line">|     |-- codegen</div><div class="line">|     |-- directives</div><div class="line">|     |-- parser</div><div class="line">|     |-- create-compiler.js</div><div class="line">|     |-- error-detector.js</div><div class="line">|     |-- heplers.js</div><div class="line">|     |-- index.js</div><div class="line">|     |-- optimizer.js</div><div class="line">|-- core</div><div class="line">|     |-- components</div><div class="line">|     |-- global-api // add global api to Vue</div><div class="line">|     |-- instance  // vue instance</div><div class="line">|     |-- observer</div><div class="line">|     |-- util</div><div class="line">|     |-- vdom</div><div class="line">|     |-- config.js</div><div class="line">|     |-- index.js</div><div class="line">|-- platforms</div><div class="line">|     |-- web</div><div class="line">|         |-- entry-compiler.js</div><div class="line">|         |-- entry-runtime-with-compiler.js    // generate vue includes runtime and compiler</div><div class="line">|         |-- entry-runtime.js  // generate vue only inludes runtime</div><div class="line">|         |-- entry-server-basic-renderer.js</div><div class="line">|         |-- entry-server-renderer.js</div><div class="line">|     |-- weex</div><div class="line">|         |-- entry-compiler.js</div><div class="line">|         |-- entry-framework.js</div><div class="line">|         |-- entry-runtime-factory.js</div><div class="line">|-- server</div><div class="line">|-- sfc</div><div class="line">|-- shared</div></pre></td></tr></table></figure>
 <p>Each vue component is a vue instance.</p>
 <p>In <code>src/core/instance/index.js</code></p>
@@ -346,22 +346,6 @@
       
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/03/31/vue-制作上传组件（vue-jquery-file-upload）/" rel="next" title="vue 制作上传组件（vue + jquery-file-upload）">
-                <i class="fa fa-chevron-left"></i> vue 制作上传组件（vue + jquery-file-upload）
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-          </div>
-        </div>
       
 
       
@@ -435,7 +419,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -472,7 +456,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Preparation"><span class="nav-number">1.</span> <span class="nav-text">Preparation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Preparation"><span class="nav-number">1.</span> <span class="nav-text">Preparation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">2.</span> <span class="nav-text">Overview</span></a></li></ol></div>
             
 
           </div>
@@ -510,7 +494,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -609,6 +593,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
