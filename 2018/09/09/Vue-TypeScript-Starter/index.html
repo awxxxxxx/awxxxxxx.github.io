@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="遇见更贵的世界">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Waterbear&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Since version 2.5.0+, Vue has greatly improved typing declarations to support TypeScript. It is time to integrate TypeScript.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue + TypeScript Starter">
+<meta property="og:url" content="http://yoursite.com/2018/09/09/Vue-TypeScript-Starter/index.html">
 <meta property="og:site_name" content="Waterbear&#39;s blog">
-<meta property="og:description" content="遇见更贵的世界">
+<meta property="og:description" content="Since version 2.5.0+, Vue has greatly improved typing declarations to support TypeScript. It is time to integrate TypeScript.">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-09-09T14:22:25.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Waterbear&#39;s blog">
-<meta name="twitter:description" content="遇见更贵的世界">
+<meta name="twitter:title" content="Vue + TypeScript Starter">
+<meta name="twitter:description" content="Since version 2.5.0+, Vue has greatly improved typing declarations to support TypeScript. It is time to integrate TypeScript.">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/09/09/Vue-TypeScript-Starter/"/>
 
 
 
 
 
-  <title>Waterbear's blog</title>
+  <title>Vue + TypeScript Starter | Waterbear's blog</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -249,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/09/Vue-TypeScript-Starter/" itemprop="url">Vue + TypeScript Starter</a></h1>
+          <h1 class="post-title" itemprop="name headline">Vue + TypeScript Starter</h1>
         
 
         <div class="post-meta">
@@ -301,16 +299,29 @@
       
 
       
-        
-          <p>Since version 2.5.0+, Vue has greatly improved typing declarations to support TypeScript. It is time to integrate TypeScript.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/09/Vue-TypeScript-Starter/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>Since version 2.5.0+, Vue has greatly improved typing declarations to support TypeScript. It is time to integrate TypeScript.</p>
+<a id="more"></a>
+<h2 id="Why-TypeScript"><a href="#Why-TypeScript" class="headerlink" title="Why TypeScript"></a>Why TypeScript</h2><blockquote>
+<p>TypeScript is a typed superset of JavaScript that compilers to plain JavaScript. Any browser. Any host. Any OS. Open source.</p>
+</blockquote>
+<p>TypeScript primarily offers <strong>optionnal static typing</strong>, <strong>class</strong> and <strong>interface</strong>, which can help developers build robust applications.</p>
+<p>Hence, you can get enhanced IDE support that get richer information in real-time by the TypeScript compiler.</p>
+<p>More details please check <a href="http://www.typescriptlang.org/index.html" target="_blank" rel="external">TypeScript</a>.</p>
+<h2 id="Getting-Start"><a href="#Getting-Start" class="headerlink" title="Getting Start"></a>Getting Start</h2><p>There are many ways to get start with TypeScript.</p>
+<ul>
+<li>Using vue-cli@3.x. In the new versions of Vue CLI offers the TypeScript option when <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank" rel="external">creating project</a>. It will automatically initialize the project, generate config files and install dependencies.</li>
+<li>Following the <a href="https://github.com/Microsoft/TypeScript-Vue-Starter" target="_blank" rel="external">TypeScript-Vue-Starter</a>, doing above work step by step. <strong>Recommended</strong></li>
+</ul>
+<h2 id="Writing-Components"><a href="#Writing-Components" class="headerlink" title="Writing Components"></a>Writing Components</h2><p>Object-style Vue components is recommended, you can get completion by <a href="https://github.com/vuejs/vetur" target="_blank" rel="external">vetur</a> using this style.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Vue.extend(&#123;</div><div class="line"></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>If you want to write class-style Vue components. There are two helper library <a href="https://github.com/vuejs/vue-class-component" target="_blank" rel="external">vue-class-component</a> and <a href="https://github.com/kaorun343/vue-property-decorator" target="_blank" rel="external">vue-property-decorator</a>.</p>
+<p>Many of the Vue API work expectedly, there ary some common problems should be noted.</p>
+<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><p>For object-style components, when using props in <code>computed</code>, TypeScript may alert that <code>Property &#39;xxx&#39; does not exist on &#39;xxx&#39;</code>. Then, you should add annotation to <code>computed</code>.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Vue.extend(&#123;</div><div class="line">    props: &#123;</div><div class="line">        name: <span class="built_in">String</span>,</div><div class="line">    &#125;,</div><div class="line">    computed: &#123;</div><div class="line">        myName(): <span class="built_in">string</span> &#123; <span class="comment">// add `string` annotation</span></div><div class="line">            <span class="keyword">return</span> <span class="string">`My name is <span class="subst">$&#123;this.name&#125;</span>`</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h3 id="This"><a href="#This" class="headerlink" title="This"></a>This</h3><p>When you need add helper function beyond the Vue instance, especially using <code>this</code> in your function. TypeScript will also raise an error <code>[ts] &#39;this&#39; implicitly has type &#39;any&#39; because it does not have a type annotation.</code> Then you can specify <code>this: Vue</code> to avoid this problem.</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">translate</span>(<span class="params"><span class="keyword">this</span>: Vue, key: <span class="built_in">string</span></span>): <span class="title">string</span> </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.$t(<span class="built_in">string</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>More detail, see <a href="http://www.typescriptlang.org/docs/handbook/functions.html" target="_blank" rel="external">TypeScript this</a></p>
+
       
     </div>
     
@@ -327,136 +338,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/17/Reactive-of-Vue/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="waterbear">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waterbear's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/06/17/Reactive-of-Vue/" itemprop="url">Reactive of Vue</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-17T16:30:17+08:00">
-                2018-06-17
-              </time>
+              <a href="/2018/06/17/Reactive-of-Vue/" rel="next" title="Reactive of Vue">
+                <i class="fa fa-chevron-left"></i> Reactive of Vue
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h3 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h3><p>There is a question, how can I update UI conveniently when data changed and vice versa. Many <code>MVVM</code> JavaScript frameworks/Libraries are designed to sovle it. Vue is the member of MVVM family.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/06/17/Reactive-of-Vue/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -466,135 +369,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/Vue-instance-101/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="waterbear">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Waterbear's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/31/Vue-instance-101/" itemprop="url">Vue instance 101</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-31T12:37:25+08:00">
-                2018-05-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>So, you are using Vue. It’s an elegant and concise JavaScript Framework, right?</p>
-<p>After building many projects with Vue, I realized it’s time to dig into the Vue. Digging into the source code lets you understand the design philosophy behand it and avoid falling into the trap.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/31/Vue-instance-101/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -602,6 +381,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -622,8 +405,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -674,6 +466,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-TypeScript"><span class="nav-number">1.</span> <span class="nav-text">Why TypeScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Start"><span class="nav-number">2.</span> <span class="nav-text">Getting Start</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Writing-Components"><span class="nav-number">3.</span> <span class="nav-text">Writing Components</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Props"><span class="nav-number">3.1.</span> <span class="nav-text">Props</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#This"><span class="nav-number">3.2.</span> <span class="nav-text">This</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -814,6 +622,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
